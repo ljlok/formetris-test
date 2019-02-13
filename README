@@ -1,0 +1,32 @@
+*** My Legacy Project ***
+
+Author : Bill <bill@formetris.com>
+
+
+1) Installation
+
+This project requires PHP 5.6
+This project uses Composer (https://getcomposer.org) for its dependency management.
+To install all the project dependencies, just run "composer install" in the project root directory.
+
+
+2) Running
+
+You can either use the given start-dev-server.sh script which will start a built-in server on localhost:8000
+or setup your own Apache, Nginx or whatever.
+Here is an Apache vhost configuration example:
+
+        <VirtualHost *:80>
+            ServerName localhost
+            
+            DocumentRoot "/path/to/my-legacy-project/src/public"
+            <Directory "/path/to/my-legacy-project/src/public">
+                Order allow,deny
+                allow from all
+            </Directory>
+        </VirtualHost>
+
+
+3) Testing
+
+Run "composer test" to run the Unit Tests.
